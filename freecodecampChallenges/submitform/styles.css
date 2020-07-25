@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+:root{
+    --pastel-pink: hsla(12, 46%, 73%, 1);
+    --burnished-brown: hsla(8, 23%, 59%, 1);
+    --dark-purple: hsla(284, 59%, 14%, 1);
+    --patriarch: #6c0377;
+    --mulberry-crayola: hsla(319, 57%, 53%, 1);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    outline: none;
+}
+
+html,body{
+    width:100%;
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1546769821-d1137cf15c15?ixlib=rb-1.2.1&auto=format&fit=crop&w=1230&q=80') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    wdith:100%;
+    min-height: 100vh;
+    background: rgb(108,3,119);
+    background: -moz-linear-gradient(135deg, rgba(108,3,119,0.5327264694940477) 62%, rgba(108,3,119,0.5215219877013305) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(108,3,119,0.5327264694940477) 62%, rgba(108,3,119,0.5215219877013305) 100%);
+    background: linear-gradient(135deg, rgba(108,3,119,0.5327264694940477) 62%, rgba(108,3,119,0.5215219877013305) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6c0377",endColorstr="#6c0377",GradientType=1); 
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding:1rem 0;
+}
+
+
+#title{
+    color:#fff;
+    text-align: center;
+    font-weight: lighter;
+    text-transform:capitalize;
+}
+
+#description{
+    font-size:0.85rem;
+    color:#fff;
+    padding:1rem 0;
+}
+.form-container{
+    width:50%;
+    padding:0;
+    background:rgba(0,0,0,0.5);
+    padding:0.5rem;
+    border-radius: 5px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#survey-form{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding:2rem 1rem;
+}
+label{
+    color:#fff;
+    padding:0.75rem 0;
+}
+
+input{
+    padding:0.75rem 0.75rem;
+    border:2px solid #ffc;
+    border-radius: 5px;
+    margin:0.5rem;
+}
+input::placeholder{
+    font-size:1.1rem;
+    color:#aaa;
+}
+select{
+    padding:0.75rem 0.5rem;
+    border-radius:5px;
+    border:none;
+    margin:0.5rem;
+}
+
+p{
+    color:#fff;
+    padding:0.75rem 0;
+}
+
+#comments{
+    padding:0.5rem 0.75rem;
+    border-radius: 5px;
+    border:none;
+}
+
+#comments::placeholder{
+    color:#bbb;
+}
+
+#submit{
+    padding:0.75rem;
+    margin:1rem 0;
+    font-size:1.5rem;
+    background:var(--mulberry-crayola);
+    color:#fff;
+    border:none;
+    border-radius: 5px;
+}
+
+
+#grayText::placeholder{
+    color:#bbb;
+}
+
+@media screen and (max-width:850px){
+    .form-container{
+        width:90%;
+    }
+}
+
+@media screen and (max-width:650px){
+    .form-container{
+        width:100%;
+    }
+}
+
+h1{
+    margin-top:3rem;
+}
+
+p{
+    margin-bottom: 1rem;
+}
