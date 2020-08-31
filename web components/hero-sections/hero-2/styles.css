@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+
+*,*::after,*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: 'Montserrat', sans-serif;
+    width:100%;
+    height:100%;
+}
+
+.hero{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background:url('../../images/ry-van-pUJPtMsg-ew-unsplash.jpg') no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index:1;
+    color:#fff;
+    text-align:center;
+}
+.tag-link{
+    color:#cfc;
+    font-weight: 500;
+    text-decoration:none;
+    cursor: pointer;
+    text-transform:lowercase;
+    text-shadow: 0 0 4px #cfc;
+}
+.highlight{
+    display: inline-block;
+    font-weight: 500;
+    font-size:3rem;
+    color:lightcoral;
+    text-shadow: 0 0 4px lightcoral;
+}
+.tag-link:hover{
+    text-decoration:underline;
+}
+
+.hero-text-title{
+    max-width:1200px;
+    padding:2rem 0.5rem;
+}
+.hero-text-tagline{
+    font-size:1.2rem;
+    margin-bottom: 1rem;
+}
+
+.btn-container{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.cta{
+    padding:0.5rem 0.75rem;
+    font-size:1.1rem;
+    background:transparent;
+    color:#fff;
+    border:2px solid #fff;
+    margin:0 0.5rem;
+    border-radius:5rem;
+    transition:0.5s ease all;
+}
+
+.btn-1{
+    background:#fff;
+    color:#333;
+}
+
+.btn-1:hover{
+    box-shadow: 0 0 4px 1px #fff;
+}
+
+.btn-2:hover{
+    border:2px solid transparent;
+    text-shadow: 0 0 4px #fff;
+    box-shadow: 0 0 4px 1px #fff;
+}
+.hero::after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(2,0,36,0.5);
+    background: linear-gradient(259deg, rgba(2,0,36,.75) 0%, rgba(80,80,173,.3) 62%); 
+    z-index:-1;
+}
+
+
+
+/* media queries */
+@media screen and (max-width:360px){
+    .highlight{
+        font-size:15vw;
+    }
+    .hero-text-title{
+        font-weight: 500;
+        font-size:10vw;
+    }
+    .hero-text-tagline{
+        font-size:6vw;
+    }
+    .cta{
+        font-size:5vw;
+        font-weight: 900;
+    }
+    .btn-container{
+        width:100%;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+    .cta{
+        width:90%;
+        margin:0.5rem 0;
+    }
+}

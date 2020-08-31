@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap');
+
+*,*::after,*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    width:100%;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#fff;
+}
+
+/* card styles */
+.card{
+    max-width:450px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition:0.4s ease all;
+    box-shadow:0 0 4px 1px #ccc;
+}
+
+.card:hover{
+    background: #ffffff;
+    /* box-shadow:  5px 5px 18px #cccccc, 
+                -5px -5px 18px #ffffff; */
+
+    background: #ffffff;
+    box-shadow:  6px 6px 17px #d6d6d6, 
+                    -6px -6px 17px #ffffff;
+    transform: translate(0px,-10px);
+}
+.image-container{
+    width:100%;
+    min-height:250px;
+    background:url('../images/joel-holland-D3NmuYpp73I-unsplash.jpg') no-repeat;
+    background-size: cover;
+    background-position:center;
+    position: relative;
+}
+.content-container{
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+}
+.card-body{
+    padding:1rem 0;
+}
+.card-title{
+    font-size:1.75rem;
+    color:darkslategray;
+}
+
+.card-box-content{
+    font-size:1rem;
+    line-height:1.5rem;
+}
+.card-footer{
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0.5rem 0;
+}
+.fa{
+    padding:0 0.2rem;
+    color:darkslategray;
+    font-weight: bold;
+    cursor: pointer;
+}
+.fa-thumbs-o-up{
+    color:blueviolet;
+}
+.fa-heart-o{
+    color:crimson;
+}
+
+.fa-facebook{
+    color:darkblue;
+}
+.fa-instagram{
+    color:coral;
+}
+
+.fa-twitter{
+    color:lightsteelblue;
+}
+
+/* image -container styles */
+.card-cta{
+    color:#ffc;
+    text-decoration:none;
+    padding:1rem 1.5rem;
+    border:2px solid #ffc;
+    margin:0.2rem;
+    transition:0.5s ease all;
+}
+
+.card-cta:hover{
+    border:2px solid #ffc;
+    cursor:pointer;
+    background:#ffc;
+    color:rgba(0,0,0,0.5);
+}
+.tag-text{
+    max-width:75%;
+    text-align: center;
+    font-size:0.9rem;
+    margin-top:1rem;
+}
+.image-overlay-content{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    /* animation:slideDown 1s ease forwards; */
+    animation:fadeIn 1s ease forwards;
+    /* animation:PopIn 1s ease forwards; */
+    display: none;
+}
+
+/* media queries */
+@media screen and (max-width:650px){
+    .card{
+        margin:1rem;
+    }
+}
+
+/* keyframes */
+@keyframes slideDown{
+    from {
+        transform: translateY(-100%);
+      }
+    
+      to {
+        transform: translateY(0%);
+      }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes PopIn{
+    from{
+        opacity:0;
+        transform:scale(2);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes fadeOut{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
