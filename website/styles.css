@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+*,*::after,*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-red:lightcoral;
+    --color-blue:darkslategray;
+    --color-teal:teal;
+}
+
+html,body{
+    font-family: 'Montserrat', sans-serif;
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    scroll-behavior: smooth;
+    color:var(--color-blue);
+    text-shadow: 0 0 8px #ccc;
+}
+
+.heading{
+    text-align: center;
+    font-size:2rem;
+    margin-bottom: 1rem;
+}
+.text-normal{
+    padding:0.75rem 0;
+    font-size:0.97rem;
+}
+
+.logo-highlight,.highlight{
+    color:var(--color-red);
+}
+
+img{
+    max-width: 100%;
+    max-height:100%;
+    object-fit: cover;
+}
+
+a{
+    text-decoration:none;
+}
+
+section.section{
+    width:90%;
+    padding:0.75rem 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin:0.75rem auto;
+}
+
+/* header styles */
+header{
+    width:100%;
+    height:3rem;
+    box-shadow: 0 0.1rem 5px rgb(160, 160, 160);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 2rem;
+}
+
+.logo{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color:var(--color-blue);
+    padding:1rem 0.2rem;
+}
+.logo-text{
+    text-shadow: 0 0 5px #aaa;
+}
+.nav{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.nav-link{
+    display: inline-block;
+    padding:0 1.5rem;
+    color:var(--color-teal);
+    border:2px solid transparent;
+    transition:0.3s ease all;
+}
+
+.nav-link:hover{
+    border-left:2px solid var(--color-red);
+}
+
+
+/* hero styles */
+.hero{
+    width:100%;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.content-container{
+    padding:1rem 2rem;
+}
+
+.offer{
+    font-size: clamp(1.5rem, 10vw, 4rem); 
+    font-weight: normal;
+    text-shadow: 0 0 3px #333;
+}
+
+.tagline{
+    padding:1rem 0;
+}
+.tagline .highlight{
+    text-decoration:underline;
+    font-weight: bold;
+}
+
+.aboutus{
+    flex-direction: row-reverse;
+}
+
+/* services section */
+
+/* card styles */
+.card{
+    max-width:450px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition:0.4s ease all;
+    box-shadow:0 0 4px 1px #ccc;
+}
+
+.card:hover{
+    background: #ffffff;
+    /* box-shadow:  5px 5px 18px #cccccc, 
+                -5px -5px 18px #ffffff; */
+
+    background: #ffffff;
+    box-shadow:  6px 6px 17px #d6d6d6, 
+                    -6px -6px 17px #ffffff;
+    transform: translate(0px,-10px);
+}
+.card-image-container{
+    width:100%;
+    min-height:250px;
+    background:url('./images/joel-holland-D3NmuYpp73I-unsplash.jpg') no-repeat;
+    background-size: cover;
+    background-position:center;
+    position: relative;
+}
+.content-container{
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+}
+.card-body{
+    padding:1rem 0;
+}
+.card-title{
+    font-size:1.75rem;
+    color:darkslategray;
+}
+
+.card-box-content{
+    font-size:1rem;
+    line-height:1.5rem;
+}
+.card-footer{
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0.5rem 0;
+}
+.fa{
+    padding:0 0.2rem;
+    color:darkslategray;
+    font-weight: bold;
+    cursor: pointer;
+}
+.fa-thumbs-o-up{
+    color:blueviolet;
+}
+.fa-heart-o{
+    color:crimson;
+}
+
+.fa-facebook{
+    color:darkblue;
+}
+.fa-instagram{
+    color:coral;
+}
+
+.fa-twitter{
+    color:lightsteelblue;
+}
+
+/* image -container styles */
+.card-cta{
+    color:#ffc;
+    text-decoration:none;
+    padding:1rem 1.5rem;
+    border:2px solid #ffc;
+    margin:0.2rem;
+    transition:0.5s ease all;
+}
+
+.card-cta:hover{
+    border:2px solid #ffc;
+    cursor:pointer;
+    background:#ffc;
+    color:rgba(0,0,0,0.5);
+}
+.tag-text{
+    max-width:75%;
+    text-align: center;
+    font-size:0.9rem;
+    margin-top:1rem;
+}
+.image-overlay-content{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    /* animation:slideDown 1s ease forwards; */
+    animation:fadeIn 1s ease forwards;
+    /* animation:PopIn 1s ease forwards; */
+    display: none;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.cards-container{
+    display: flex;
+}
+
+.cards-container>*{
+    margin:1rem;
+}
+/* media queries */
+@media screen and (max-width:650px){
+    .card{
+        margin:1rem;
+    }
+}
+
+/* keyframes */
+@keyframes slideDown{
+    from {
+        transform: translateY(-100%);
+      }
+    
+      to {
+        transform: translateY(0%);
+      }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes PopIn{
+    from{
+        opacity:0;
+        transform:scale(2);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes fadeOut{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+} 
+
+/* media queries */
+@media screen and (max-width:800px){
+    .nav{
+        display: none;
+    }
+    .hero{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+
+/* map container */
+.map-container{
+    width:100%;
+    min-height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    z-index:-1;
+}
+.map{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+}
+
+.map-page{
+    width:100%;
+    height:100%;
+}
+
+.contact-form{
+    width:30%;
+    height:100vh;
+    background:rgba(0, 0, 0, 0.705);
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:1rem;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+footer{
+    margin-top:1rem;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
